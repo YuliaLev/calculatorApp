@@ -1,0 +1,190 @@
+body {
+  font: 15px 'Pacifico', cursive;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  background: url("pictures/back2.jpg") no-repeat;
+  background-size: 100%;
+  background-position: 0 10%;
+  position: relative;
+}
+
+.mainWrapper {
+  height: 100vh;
+  display: flex;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  width: 178px;
+  margin-left: -89px;
+  color: #e42b77;
+  font-size: 40px;
+  margin-top: 30px;
+  z-index: 0;
+}
+
+#main {
+  width: 239px;
+  height: 420px;
+  background: white;
+  margin: auto;
+  position: relative;
+  font: 20px 'Comfortaa', cursive;
+  box-shadow: -5px 24px 100px 0 #999;
+}
+
+.inputsDiv {
+  height: 120px;
+  background-color: #F0EEF1;
+  width: 239px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main.moreMain , .moreInputsDiv {
+  width: 299px;
+}
+
+input {
+  font: 22px 'Comfortaa', cursive;
+  height: 55px;
+  width: 238px;
+  border: none;
+  background-color: #F0EEF1;
+  text-align:center
+}
+
+.moreInput {
+  width: 297px;
+}
+
+.button {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  position: relative;
+  margin-right: -6px;
+}
+
+.button a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+  color: #797979;
+  margin-right: -6px;
+}
+
+div.operationBtn a{
+  color: #d4c2c9;
+  line-height: 2.27;
+  font-size: 25px;
+}
+
+.button a:hover {
+  background: #f7dd77;
+  box-shadow: 0 0 30px #ffd942;
+  font-size: 25px;
+  line-height: 2.27;
+  z-index: 1;
+}
+
+.button a:active {
+  background: #ffd942;
+  box-shadow: 0 0 40px #ffd942;
+}
+
+div.operationBtn a:hover {
+  color: white;
+  background: #f9a6ac;
+  box-shadow: 0 0 30px #f58493;
+}
+
+div.operationBtn a:active {
+  background: #f58493;
+  box-shadow: 0 0 40px #f58493;
+}
+
+div.mathBtns a, div.mathBtns a:hover{
+  line-height: 60px;
+  font-size: 20px;
+}
+
+div.mathBtns a:hover {
+  background: #86d2ea;
+  box-shadow: 0 0 40px #86d2ea;
+}
+
+div.mathBtns a:active {
+  background: #1e95ff;
+  box-shadow: 0 0 40px #1e95ff;
+}
+
+.moreBtns {
+  width: 70px;
+  height: 70px;
+  border-radius: 60px;
+  font: 22px 'Pacifico', cursive;
+  text-align: center;
+  line-height: 65px;
+  position: absolute;
+  background: dodgerblue;
+  left: 230px;
+  bottom: 270px;
+  color: white;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.moreBtns:hover, .moreBtns:active {
+  background: #2488e8;
+}
+
+.moreBtnUp {
+  bottom: 300px;
+  left: 260px;
+}
+
+.info {
+  width: 300px;
+  height: 100px;
+  font: 20px 'Pacifico', cursive;
+  color: black;
+  position: absolute;
+  left: 340px;
+  bottom: 260px;
+  opacity: 0.38;
+  z-index: 100;
+}
+
+.arrow {
+  width: 300px;
+  height: 100px;
+  left: 300px;
+  bottom: 310px;
+  position: absolute;
+  background: url("pictures/arrow.png") no-repeat -7px;
+  background-size: 20%;
+  z-index: 100;
+  opacity: 0.7;
+}
+
+.plane {
+  width: 300px;
+  height: 100px;
+  left: 350px;
+  top: 90px;
+  position: absolute;
+  background: url("pictures/paper-plane.png") no-repeat;
+  background-size: 30%;
+  z-index: 100;
+  opacity: 0.6;
+}

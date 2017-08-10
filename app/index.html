@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calcApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Calculator</title>
+  <link rel="shortcut icon" href="pictures/ico.ico" type="image/x-icon">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="calcController">
+  <h1>Calculator</h1>
+  <div class="mainWrapper">
+    <div class="plane"></div>
+    <div id="main" ng-class="{'moreMain':moreOperations}">
+      <div class="inputsDiv" ng-class="{'moreInputsDiv':moreOperations}">
+        <input disabled type="text" ng-model="allOperations" ng-class="{'moreInput':moreOperations}">
+        <input disabled type="text" ng-model="valueOnScreen" ng-class="{'moreInput':moreOperations}">
+      </div>
+      <div class="operationBtn button" ng-click="clearValue()"><a href="#">C</a></div>
+      <div class="operationBtn button" ng-click="bracketStart()"><a href="#">&#40;</a></div>
+      <div class="operationBtn button" ng-click="bracketEnd()"><a href="#">&#41;</a></div>
+      <div class="operationBtn button" ng-click="operation('/')"><a href="#">&divide;</a></div>
+      <div class="operationBtn button" ng-click="factorial()" ng-show="moreOperations" ng-class="{'mathBtns':moreOperations}"><a href="#">n!</a></div>
+      <br>
+      <div class="button" ng-click="pressedNumber('7')"><a href="#">7</a></div>
+      <div class="button" ng-click="pressedNumber('8')"><a href="#">8</a></div>
+      <div class="button" ng-click="pressedNumber('9')"><a href="#">9</a></div>
+      <div class="operationBtn button" ng-click="operation('*')"><a href="#">&times;</a></div>
+      <div class="operationBtn button" ng-click="sqrt()" ng-show="moreOperations" ng-class="{'mathBtns':moreOperations}"><a href="#">&radic;</a></div>
+      <br>
+      <div class="button" ng-click="pressedNumber('4')"><a href="#">4</a></div>
+      <div class="button" ng-click="pressedNumber('5')"><a href="#">5</a></div>
+      <div class="button" ng-click="pressedNumber('6')"><a href="#">6</a></div>
+      <div class="operationBtn button" ng-click="operation('-')"><a href="#">&minus;</a></div>
+      <div class="operationBtn button" ng-click="sin()" ng-show="moreOperations" ng-class="{'mathBtns':moreOperations}"><a href="#">Sin</a></div>
+      <br>
+      <div class="button" ng-click="pressedNumber('1')"><a href="#">1</a></div>
+      <div class="button" ng-click="pressedNumber('2')"><a href="#">2</a></div>
+      <div class="button" ng-click="pressedNumber('3')"><a href="#">3</a></div>
+      <div class="operationBtn button" ng-click="operation('+')"><a href="#">&plus;</a></div>
+      <div class="operationBtn button" ng-click="cos()" ng-show="moreOperations" ng-class="{'mathBtns':moreOperations}"><a href="#">Cos</a></div>
+      <br>
+      <div class="button" ng-click="pressedNumber('0')"><a href="#">0</a></div>
+      <div class="operationBtn button" ng-click="decimal()"><a href="#">&#46;</a></div>
+      <div class="operationBtn button" ng-click="percent()"><a href="#">&#37;</a></div>
+      <div class="operationBtn button" ng-click="operation('=')"><a href="#">&equals;</a></div>
+      <div class="operationBtn button" ng-click="tan()" ng-show="moreOperations" ng-class="{'mathBtns':moreOperations}"><a href="#">Tan</a></div>
+      <div class="moreBtns" ng-hide="moreOperations" ng-click="showMoreOperations()" ng-class="{'moreBtnUp':moreOperations}">More</div>
+      <div class="moreBtns" ng-show="moreOperations" ng-click="showMoreOperations()" ng-class="{'moreBtnUp':moreOperations}">Close</div>
+      <div ng-hide="moreOperations" class="info">Click here</div>
+      <div ng-hide="moreOperations" class="arrow"></div>
+    </div>
+  </div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="controllers/calcController.js"></script>
+</body>
+</html>
